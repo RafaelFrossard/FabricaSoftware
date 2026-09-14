@@ -1,4 +1,4 @@
-const companyLinks = ["Portfolio", "Careers", "Contact us"];
+const companyLinks = ["Portfolio", "Equipe","Projetos", "Entre em Contato", ];
 
 function FacebookIcon() {
   return (
@@ -41,10 +41,9 @@ export default function Footer() {
               LOGO
             </a>
             <p className="text-sm text-white/80 leading-7 mb-4">
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry.
+              Desenvolvemos soluções de software para transformar ideias em projetos que geram valor.
             </p>
-            <p className="text-sm text-white/80 mb-4">@Company.com</p>
+            <p className="text-sm text-white/80 mb-4">fabricasoftware@integrowintegrado.br</p>
             <div className="flex items-center gap-3">
               {[FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon].map(
                 (Icon, i) => (
@@ -61,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-medium text-[17px] mb-5">About us</p>
+            <p className="font-medium text-[17px] mb-5">Sobre Nós</p>
             <ul className="space-y-3 text-sm text-white/80">
               {companyLinks.map((link) => (
                 <li key={link}>
@@ -74,19 +73,18 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-medium text-[17px] mb-5">Contact us</p>
+            <p className="font-medium text-[17px] mb-5">Contate-nos</p>
             <p className="text-sm text-white/80 leading-7 mb-4">
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry.
+              Estamos disponíveis para conversar sobre seu projeto, tirar dúvidas e entender como podemos ajudar.
             </p>
-            <p className="text-sm text-white/80">+9000 0000 000</p>
+            <p className="text-sm text-white/80">55(00)00000-0000</p>
           </div>
         </div>
 
         <hr className="border-white/10 mb-6" />
 
         <p className="text-center text-[13px] text-white/70">
-          Copyright ® 2021 Company All rights Reserved
+          © 2026 Fábrica de Software. Todos os direitos reservados.
         </p>
       </div>
     </footer>
