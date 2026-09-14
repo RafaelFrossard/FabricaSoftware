@@ -1,6 +1,6 @@
 import { heroIllustration } from "../assets/figmaAssets";
 
-export default function Hero() {
+export default function Home() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#fff7ef] to-white">
       <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 grid md:grid-cols-2 gap-12 items-center">

@@ -1,6 +1,6 @@
 import { projectImages } from "../assets/figmaAssets";
 
-export default function Portfolio() {
+export default function Projects() {
   return (
     <section id="projects" className="max-w-7xl mx-auto px-8 lg:px-16 py-20">
       <div className="text-center max-w-2xl mx-auto mb-14">

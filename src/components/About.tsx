@@ -1,6 +1,6 @@
 import { officeImage } from "../assets/figmaAssets";
 
-export default function AboutBanner() {
+export default function About() {
   return (
     <section id="about" className="max-w-7xl mx-auto px-8 lg:px-16 py-16 text-center">
      <h2 className="text-black text-2xl lg:text-[32px] font-semibold leading-snug max-w-3xl mx-auto mb-12">

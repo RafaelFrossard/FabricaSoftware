@@ -21,7 +21,7 @@ const services: ServiceItem[] = [
   { icon: <Cuboid size={28} />, label: "3D Modelings" },
 ];
 
-export default function Services() {
+export default function Areas() {
   return (
     <section id="areas" className="max-w-7xl mx-auto px-8 lg:px-16 py-16">
       <h2 className="text-2xl lg:text-[30px] font-semibold text-brand-ink mb-6">

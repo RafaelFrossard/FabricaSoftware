@@ -1,23 +1,23 @@
-import Header from "./components/Header";
-import Hero from "./components/Home";
-import AboutBanner from "./components/About";
-import Services from "./components/Areas";
-import Team from "./components/Team";
-import Portfolio from "./components/Projects";
-import CtaAbout from "./components/Contact";
+import About from "./components/About";
+import Areas from "./components/Areas";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Team from "./components/Team";
 
 function App() {
   return (
     <div className="font-poppins">
       <Header />
       <main>
-        <Hero />
-        <AboutBanner />
-        <Services />
+        <Home />
+        <About />
+        <Areas />
         <Team />
-        <Portfolio />
-        <CtaAbout />
+        <Projects />
+        <Contact />
       </main>
       <Footer />
     </div>
