@@ -2,7 +2,7 @@ import { officeImage } from "../assets/figmaAssets";
 
 export default function AboutBanner() {
   return (
-    <section className="max-w-7xl mx-auto px-8 lg:px-16 py-16 text-center">
+    <section id="about" className="max-w-7xl mx-auto px-8 lg:px-16 py-16 text-center">
       <p className="text-brand-ink text-lg lg:text-[25px] font-semibold leading-relaxed max-w-3xl mx-auto mb-12">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry.

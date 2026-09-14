@@ -4,7 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: #002A52;
+  --cor-destaque: #e74c3c;
+  --fonte-padrao: 'Helvetica', sans-serif;
+  --espacamento: 16px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
+

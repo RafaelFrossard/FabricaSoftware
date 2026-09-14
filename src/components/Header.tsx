@@ -1,16 +1,18 @@
 import { pinIcon, phoneIcon } from "../assets/figmaAssets";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "About us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "News", href: "#news" },
+  { label: "Início", href: "#" },
+  { label: "Sobre", href: "#about" },
+  { label: "Áreas de atuação", href: "#areas" },
+  { label: "Equipe", href: "#team" },
+  { label: "Projetos", href: "#projects" },
+  { label: "Contato", href: "#contact" },
 ];
 
 export default function Header() {
   return (
     <header className="w-full">
-      {/* Top info bar */}
+      {/* Top info bar
       <div className="hidden md:flex justify-end items-center gap-8 bg-[#001F3D] px-8 lg:px-16 py-2 text-[13px] text-brand-ink">
         <div className="flex items-center gap-2">
           <img src={pinIcon} alt="" className="h-3.5 w-3.5" />
@@ -20,7 +22,7 @@ export default function Header() {
           <img src={phoneIcon} alt="" className="h-3.5 w-3.5" />
           <span>+94 000 00000</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Main nav */}
       <div className="bg-cover bg-center py-6 px-8 lg:px-16 flex items-center justify-between bg-[#002A52]">

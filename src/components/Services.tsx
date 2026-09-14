@@ -23,7 +23,7 @@ const services: ServiceItem[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="max-w-7xl mx-auto px-8 lg:px-16 py-16">
+    <section id="areas" className="max-w-7xl mx-auto px-8 lg:px-16 py-16">
       <h2 className="text-2xl lg:text-[30px] font-semibold text-brand-ink mb-6">
         Lorem Ipsum
       </h2>

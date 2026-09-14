@@ -2,7 +2,7 @@ import { ctaIllustration } from "../assets/figmaAssets";
 
 export default function CtaAbout() {
   return (
-    <section className="bg-[#f5f5f5] py-20">
+    <section id="contact" className="bg-[#f5f5f5] py-20">
       <div className="max-w-7xl mx-auto px-8 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
         <img
           src={ctaIllustration}
