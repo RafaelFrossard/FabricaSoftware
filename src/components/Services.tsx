@@ -25,12 +25,12 @@ export default function Services() {
   return (
     <section id="areas" className="max-w-7xl mx-auto px-8 lg:px-16 py-16">
       <h2 className="text-2xl lg:text-[30px] font-semibold text-brand-ink mb-6">
-        Lorem Ipsum
+        Como podemos ajudar sua empresa?
       </h2>
       <p className="text-brand-muted text-base max-w-2xl leading-8 mb-14">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry&apos;s standard dummy
-        text ever since the 1500s,
+              Cada negócio tem suas próprias necessidades. Criamos sites
+        e aplicativos com você, pensando em quem vai usar e no que
+        precisa funcionar melhor no dia a dia.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10">
