@@ -1,10 +1,10 @@
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import AboutBanner from "./components/AboutBanner";
-import Services from "./components/Services";
+import Hero from "./components/Home";
+import AboutBanner from "./components/About";
+import Services from "./components/Areas";
 import Team from "./components/Team";
-import Portfolio from "./components/Portfolio";
-import CtaAbout from "./components/CtaAbout";
+import Portfolio from "./components/Projects";
+import CtaAbout from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
