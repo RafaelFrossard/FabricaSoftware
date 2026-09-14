@@ -33,12 +33,12 @@ function LinkedinIcon() {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#002A52] text-white pt-20 pb-8">
+    <footer className="bg-[var(--main-color)] text-white pt-20 pb-8">
       <div className="mx-auto px-8 lg:px-16 ">
         <div className="grid md:grid-cols-3 gap-10 mb-16">
           <div>
             <a href="/" className="text-2xl font-bold block mb-4">
-              LOGO
+              <img src="/logo-horizontal-negativo.svg" className="w-40" alt="" />
             </a>
             <p className="text-sm text-white/80 leading-7 mb-4">
               Lorem Ipsum is simply dummy text of the printing and

@@ -1,42 +1,57 @@
-import { teamPhotos } from "../../assets/figmaAssets";
+import joao from "../../assets/img/joao.jpeg";
+import julia from "../../assets/img/julia.jpeg";
+import rafael from "../../assets/img/rafael.jpeg";
+import thaila from "../../assets/img/thaila.png";
 import Container from "../layout/Container";
 
 const members = [
-  { name: "John peter", role: "COO", photo: teamPhotos.bill },
-  { name: "John peter", role: "COO", photo: teamPhotos.beverly },
-  { name: "John peter", role: "COO", photo: teamPhotos.claudia },
-  { name: "John peter", role: "COO", photo: teamPhotos.avatar },
+  { name: "João", role: "Desenvolvimento", photo: joao },
+  { name: "Julia", role: "Desenvolvimento", photo: julia },
+  { name: "Rafael", role: "Desenvolvimento", photo: rafael },
+  { name: "Thaila", role: "Desenvolvimento", photo: thaila },
 ];
 
 export default function Team() {
   return (
     <section id="team" className="bg-[#f5f5f5] py-20">
       <Container>
-        <div className="  ">
-          <h2 className="text-2xl lg:text-[25px] font-semibold text-brand-ink mb-14">
-            Our Team
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-2xl lg:text-[32px] font-semibold text-[#002A52] mb-4">
+            Quem cria com você
           </h2>
-  
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {members.map((member, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-[20px] p-8 flex flex-col items-center text-center gap-4"
-              >
+
+          <p className="text-base md:text-lg text-black/70 leading-8">
+            Conheça quem une ideias, tecnologia e cuidado para
+            dar forma ao seu projeto.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+          {members.map((member) => (
+            <div
+              key={member.name}
+              className="flex flex-col items-center text-center"
+            >
+              <div className="w-32 h-32 md:w-36 md:h-36 overflow-hidden rounded-full border-4 border-white ring-1 ring-[#002A52]/15">
                 <img
                   src={member.photo}
-                  alt={member.name}
-                  className="h-32 w-auto object-contain"
+                  alt={`Foto de ${member.name}`}
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                  width={144}
+                  height={144}
                 />
-                <div>
-                  <p className="font-semibold text-black text-lg">
-                    {member.name}
-                  </p>
-                  <p className="text-[#8b8b8b] text-sm">{member.role}</p>
-                </div>
               </div>
-            ))}
-          </div>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#002A52]">
+                {member.name}
+              </h3>
+
+              <p className="mt-1 text-sm text-black/60">
+                {member.role}
+              </p>
+            </div>
+          ))}
         </div>
       </Container>
     </section>
