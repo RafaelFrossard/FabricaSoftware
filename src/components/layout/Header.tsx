@@ -6,7 +6,6 @@ const navLinks = [
   { label: "Áreas de atuação", href: "#areas" },
   { label: "Equipe", href: "#team" },
   { label: "Projetos", href: "#projects" },
-  { label: "Contato", href: "#contact" },
 ];
 
 export default function Header() {
@@ -44,7 +43,7 @@ export default function Header() {
             href="#contact"
             className="hidden rounded-md bg-white px-5 py-2.5 text-[13px] font-medium text-brand-orange-dark transition-colors hover:bg-brand-orange hover:text-white lg:block"
           >
-            Contact us
+            Entrar em contato
           </a>
 
           {/* Botão mobile */}
