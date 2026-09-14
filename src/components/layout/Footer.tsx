@@ -1,4 +1,9 @@
-const companyLinks = ["Portfolio", "Equipe","Projetos", "Entre em Contato", ];
+const footerLinks = [
+  { label: "Portfolio", href: "#areas" },
+  { label: "Equipe", href: "#team" },
+  { label: "Projetos", href: "#projects" },
+  { label: "Entre em Contato", href: "#contact" },
+];
 
 function FacebookIcon() {
   return (
@@ -62,10 +67,10 @@ export default function Footer() {
           <div>
             <p className="font-medium text-[17px] mb-5">Sobre Nós</p>
             <ul className="space-y-3 text-sm text-white/80">
-              {companyLinks.map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-brand-orange transition-colors">
-                    {link}
+              {footerLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="hover:text-brand-orange transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}
