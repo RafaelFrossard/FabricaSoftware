@@ -1,17 +1,20 @@
+import type { ReactNode } from "react"
+
 interface ButtonProps {
-    text: string
+    link: string
+    children: ReactNode
 }
 
-export default function Button({text}:ButtonProps) {
+export default function Button({link, children}:ButtonProps) {
     return (
         <a
-            href="#contact"
+            href={link}
             className="inline-block text-white text-base font-medium rounded-full px-8 py-4"
             style={{
                 backgroundImage: "var(--secondary-gradient)",
             }}
         >
-            {text}
+            {children}
         </a>
     )
 }
