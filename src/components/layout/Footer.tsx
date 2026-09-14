@@ -48,7 +48,11 @@ export default function Footer() {
             <p className="text-sm text-white/80 leading-7 mb-4">
               Desenvolvemos soluções de software para transformar ideias em projetos que geram valor.
             </p>
-            <p className="text-sm text-white/80 mb-4">fabricasoftware@integrowintegrado.br</p>
+            <a href="mailto:fabricasoftware@integrowintegrado.br"
+              className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block"
+            >
+              fabricasoftware@integrowintegrado.br
+            </a>
             <div className="flex items-center gap-3">
               {[FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon].map(
                 (Icon, i) => (

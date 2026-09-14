@@ -1,3 +1,4 @@
+import Button from "./Button";
 
 const navLinks = [
   { label: "Início", href: "#home" },
@@ -28,12 +29,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href="#contact"
-          className="bg-white text-brand-orange-dark text-[13px] font-medium rounded-md px-5 py-2.5 hover:bg-brand-orange hover:text-white transition-colors"
-        >
-          Contact us
-        </a>
+        <Button link="#contact">Entrar em Contato</Button>
       </div>
     </header>
   );
