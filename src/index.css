@@ -6,8 +6,8 @@
 
 :root {
   --main-color: #002A52;
-  --cor-destaque: #e74c3c;
-  --fonte-padrao: 'Helvetica', sans-serif;
+  --secondary-color: #E87D0E;
+  --secondary-gradient: linear-gradient(99deg, rgb(250, 131, 5) 2%, rgb(251, 158, 60) 117%);
   --espacamento: 16px;
 }
 
