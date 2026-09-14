@@ -33,7 +33,7 @@ function LinkedinIcon() {
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-white pt-20 pb-8">
+    <footer className="bg-[#002A52] text-white pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
         <div className="grid md:grid-cols-4 gap-10 mb-16">
           <div>
