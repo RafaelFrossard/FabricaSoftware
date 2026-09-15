@@ -40,11 +40,8 @@ export default function Header() {
           </nav>
 
           {/* Botão desktop */}
-          <Button
-            link="#contact"
-            className="hidden lg:inline-block"
-          >
-            Entrar em contato
+          <Button className="hidden lg:inline-block">
+            <a href="#contact">Entrar em contato</a>
           </Button>
 
           {/* Botão mobile */}
@@ -93,11 +90,11 @@ export default function Header() {
               </a>
             ))}
             <Button
-              link="#contact"
-              onClick={() => setIsOpen(false)}
               className="mt-5"
             >
-              Entrar em contato
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}>Entrar em contato</a>
             </Button>
           </nav>
         </div>

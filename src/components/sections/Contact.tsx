@@ -1,16 +1,11 @@
 import { ctaIllustration } from "../../assets/figmaAssets";
 import Container from "../layout/Container";
+import ContactForm from "../layout/ContactForm";
 
 export default function Contact() {
   return (
     <section id="contact" className="bg-[#f5f5f5] py-20">
       <Container>
-        <img
-          src={ctaIllustration}
-          alt="Ilustração de time colaborando"
-          className="w-full h-auto object-contain order-2 md:order-1"
-        />
-
         <div className="order-1 md:order-2">
           <h2 className="text-2xl lg:text-[32px] font-semibold text-black mb-6 leading-snug">
             <span className="text-brand-blue">
@@ -28,12 +23,11 @@ export default function Contact() {
             responsabilidade em cada projeto. Vamos descobrir como a
             tecnologia pode facilitar o dia a dia do seu negócio?
           </p>
-          <a
-            href="#contact"
-            className="inline-block bg-brand-orange-dark text-white text-base px-9 py-4 hover:bg-brand-orange transition-colors"
-          >
-            Conte sua ideia
-          </a>
+
+          <ContactForm
+            title=""
+            submitLabel="Conte sua ideia"
+          />
         </div>
       </Container>
     </section>
