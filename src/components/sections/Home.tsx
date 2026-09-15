@@ -1,4 +1,4 @@
-                                                                                                                                                                              import { heroIllustration } from "../../assets/figmaAssets";
+import { heroIllustration } from "../../assets/figmaAssets";
 import Button from "../layout/Button";
 import Container from "../layout/Container";
 
@@ -19,7 +19,7 @@ export default function Home() {
               desenvolvemos software para simplificar processos e colocar ideias em prática.
               Tudo com colaboração, responsabilidade e atenção ao que importa para o seu negócio.
             </p>
-            <Button text="Conte sua ideia" />
+            <Button><a href="#contact">Conte sua ideia</a></Button>
           </div>
 
           <div className="relative">
