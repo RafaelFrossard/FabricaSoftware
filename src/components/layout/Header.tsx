@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./Button";
 
 const navLinks = [
@@ -6,30 +7,100 @@ const navLinks = [
   { label: "Áreas de atuação", href: "#areas" },
   { label: "Equipe", href: "#team" },
   { label: "Projetos", href: "#projects" },
-  { label: "Contato", href: "#contact" },
 ];
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="w-full fixed top-0 left-0 z-50" >
-      <div className="bg-cover bg-center py-6 px-8 lg:px-16 flex items-center justify-between bg-[var(--main-color)]">
-        <a href="/" className="text-white font-bold text-2xl tracking-wide">
-          <img src="/logo-horizontal-negativo.svg" className="w-40" alt="" />
-        </a>
+    <header className="fixed top-0 left-0 z-50 w-full">
+      <div className="bg-[var(--main-color)] px-6 py-5 lg:px-16">
+        <div className="flex items-center justify-between">
 
-        <nav className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-white text-[16px] hover:text-brand-orange transition-colors"
+          {/* Logo */}
+          <a href="/" className="shrink-0">
+            <img
+              src="/logo-horizontal-negativo.svg"
+              className="w-36 sm:w-40"
+              alt="Logo"
+            />
+          </a>
+
+          {/* Menu desktop */}
+          <nav className="hidden items-center gap-8 lg:flex xl:gap-10">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-[15px] text-white transition-colors hover:text-brand-orange"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Botão desktop */}
+          <Button
+            link="#contact"
+            className="hidden lg:inline-block"
+          >
+            Entrar em contato
+          </Button>
+
+          {/* Botão mobile */}
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex h-10 w-10 items-center justify-center rounded-md text-white lg:hidden"
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
+          >
+            <span className="sr-only">
+              {isOpen ? "Fechar menu" : "Abrir menu"}
+            </span>
+
+            <div className="flex w-6 flex-col gap-1.5">
+              <span
+                className={`h-0.5 w-full bg-white transition-all ${isOpen ? "translate-y-2 rotate-45" : ""
+                  }`}
+              />
+              <span
+                className={`h-0.5 w-full bg-white transition-all ${isOpen ? "opacity-0" : ""
+                  }`}
+              />
+              <span
+                className={`h-0.5 w-full bg-white transition-all ${isOpen ? "-translate-y-2 -rotate-45" : ""
+                  }`}
+              />
+            </div>
+          </button>
+        </div>
+
+        {/* Menu mobile */}
+        <div
+          className={`overflow-hidden transition-all duration-300 lg:hidden ${isOpen ? "max-h-[500px] pt-6" : "max-h-0"
+            }`}
+        >
+          <nav className="flex flex-col border-t border-white/10 pt-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="border-b border-white/10 py-4 text-[16px] text-white transition-colors hover:text-brand-orange"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button
+              link="#contact"
+              onClick={() => setIsOpen(false)}
+              className="mt-5"
             >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <Button link="#contact">Entrar em Contato</Button>
+              Entrar em contato
+            </Button>
+          </nav>
+        </div>
       </div>
     </header>
   );
