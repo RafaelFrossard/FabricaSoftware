@@ -1,4 +1,3 @@
-import { ctaIllustration } from "../../assets/figmaAssets";
 import Container from "../layout/Container";
 import ContactForm from "../layout/ContactForm";
 
