@@ -1,7 +1,6 @@
-# Digital Agency — React + TypeScript
+# FabricaSoftware — React + TypeScript
 
-Projeto gerado a partir do design no Figma ("Digital Agency — Web Design UI Template KIT"),
-usando **Vite + React + TypeScript + Tailwind CSS**.
+Site desenvolvido para a Fabrica de Software do Grupo Integrado
 
 ## Rodando localmente
 
