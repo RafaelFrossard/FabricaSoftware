@@ -1,4 +1,3 @@
-import { projectImages } from "../../assets/figmaAssets";
 import Container from "../layout/Container";
 
 const projectNames = [
@@ -8,6 +7,16 @@ const projectNames = [
   "Projeto 4",
   "Projeto 5",
   "Projeto 6",
+];
+
+
+const projectImages = [
+  "imagem-projeto-1.svg",
+  "imagem-projeto-2.svg",
+  "imagem-projeto-3.svg",
+  "imagem-projeto-4.svg",
+  "imagem-projeto-5.svg",
+  "imagem-projeto-6.svg",
 ];
 
 export default function Projects() {
