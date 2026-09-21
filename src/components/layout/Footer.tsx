@@ -1,4 +1,4 @@
-import { faFacebook, faInstagram, faSpotify, faWhatsapp, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faSpotify, faWhatsapp, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
