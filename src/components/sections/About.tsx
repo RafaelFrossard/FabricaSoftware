@@ -14,7 +14,7 @@ export default function About() {
 
         <div className="rounded-[20px] overflow-hidden max-w-4xl mx-auto shadow-lg">
           <img
-            src={officeImage}
+            src="imagem-about.svg"
             alt="Equipe reunida em escritório"
             className="w-full h-auto object-cover"
           />
