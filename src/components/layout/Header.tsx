@@ -17,7 +17,6 @@ export default function Header() {
       <div className="bg-[var(--main-color)] px-6 py-5 lg:px-16">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
           <a href="/" className="shrink-0">
             <img
               src="/logo-horizontal-negativo.svg"
@@ -26,7 +25,6 @@ export default function Header() {
             />
           </a>
 
-          {/* Menu desktop */}
           <nav className="hidden items-center gap-8 lg:flex xl:gap-10">
             {navLinks.map((link) => (
               <a
@@ -39,12 +37,10 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Botão desktop */}
-          <Button className="hidden lg:inline-block">
-            <a href="#contact">Entrar em contato</a>
+          <Button className="hidden lg:inline-block" href="#contact">
+            Entrar em contato
           </Button>
 
-          {/* Botão mobile */}
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
@@ -73,7 +69,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Menu mobile */}
         <div
           className={`overflow-hidden transition-all duration-300 lg:hidden ${isOpen ? "max-h-[500px] pt-6" : "max-h-0"
             }`}
@@ -91,10 +86,8 @@ export default function Header() {
             ))}
             <Button
               className="mt-5"
-            >
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}>Entrar em contato</a>
+              href="#contact"
+              onClick={() => setIsOpen(false)}>Entrar em contato
             </Button>
           </nav>
         </div>
