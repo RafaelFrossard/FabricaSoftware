@@ -1,14 +1,12 @@
-import joao from "../../assets/img/joao.jpeg";
-import julia from "../../assets/img/julia.jpeg";
-import rafael from "../../assets/img/rafael.jpeg";
-import thaila from "../../assets/img/thaila.png";
 import Container from "../layout/Container";
 
 const members = [
-  { name: "João", role: "Desenvolvimento", photo: joao },
-  { name: "Julia", role: "Desenvolvimento", photo: julia },
-  { name: "Rafael", role: "Desenvolvimento", photo: rafael },
-  { name: "Thaila", role: "Desenvolvimento", photo: thaila },
+  { name: "Fernanda Ferrari", role: "Líder de Equipe", photo: "fernanda.jpg" },
+  { name: "Anderson Burnes", role: "Professor/Orientador", photo: "burnes.jpg" },
+  { name: "João", role: "Desenvolvimento", photo: "joao.jpeg" },
+  { name: "Julia", role: "Desenvolvimento", photo: "julia.jpeg" },
+  { name: "Rafael", role: "Desenvolvimento", photo: "rafael.jpeg" },
+  { name: "Thaila", role: "Desenvolvimento", photo: "thaila.png" },
 ];
 
 export default function Team() {
