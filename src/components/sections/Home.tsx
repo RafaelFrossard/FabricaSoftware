@@ -18,7 +18,7 @@ export default function Home() {
               desenvolvemos software para simplificar processos e colocar ideias em prática.
               Tudo com colaboração, responsabilidade e atenção ao que importa para o seu negócio.
             </p>
-            <Button><a href="#contact">Conte sua ideia</a></Button>
+            <Button href="#contact">Conte sua ideia</Button>
           </div>
 
           <div className="relative">

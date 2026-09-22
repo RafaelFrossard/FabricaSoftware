@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { twMerge } from "tailwind-merge";
 import { contactSchema, type ContactFormData } from "../../schema/contactSchema";
 import { formatPhone } from "../../utils/formatPhone";
+import Button from "./Button";
 
 interface ContactFormProps {
     title?: string;
@@ -173,14 +174,14 @@ export default function ContactForm({
                     )}
                 </div>
 
-                <button
+                <Button
                     type="submit"
                     disabled={status === "sending"}
-                    className="inline-block text-white text-base font-medium rounded-full px-8 py-4 disabled:opacity-60"
+                    className="disabled:opacity-10"
                     style={{ backgroundImage: "var(--secondary-gradient)" }}
                 >
                     {status === "sending" ? "Enviando..." : submitLabel}
-                </button>
+                </Button>
 
                 {status === "success" && (
                     <p className="text-green-700 text-sm">{successMessage}</p>
