@@ -13,7 +13,7 @@ export default function About() {
 
         <div className="rounded-[20px] overflow-hidden max-w-4xl mx-auto shadow-lg">
           <img
-            src="imagem-about.svg"
+            src="imagem-team1.jpeg"
             alt="Equipe reunida em escritório"
             className="w-full h-auto object-cover"
           />

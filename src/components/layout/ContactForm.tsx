@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { twMerge } from "tailwind-merge";
+import { contactSchema, type ContactFormData } from "../../schema/contactSchema";
+import { formatPhone } from "../../utils/formatPhone";
 
 interface ContactFormProps {
     title?: string;
@@ -21,25 +25,27 @@ export default function ContactForm({
     const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
     const [errorMsg, setErrorMsg] = useState("");
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
+    const {
+        register,
+        handleSubmit,
+        reset,
+        setValue,
+        formState: { errors },
+    } = useForm<ContactFormData>({
+        resolver: zodResolver(contactSchema),
+        mode: "onTouched",
+        defaultValues: { name: "", email: "", phone: "", message: "" },
+    });
+
+    const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
         setStatus("sending");
         setErrorMsg("");
-
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-        const payload = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            message: formData.get("message"),
-        };
 
         try {
             const res = await fetch("/api/sendEmail", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
+                body: JSON.stringify(data),
             });
 
             const result = await res.json();
@@ -49,13 +55,13 @@ export default function ContactForm({
             }
 
             setStatus("success");
-            form.reset();
+            reset();
             onSuccess?.();
         } catch (err) {
             setStatus("error");
             setErrorMsg(err instanceof Error ? err.message : "Erro ao enviar.");
         }
-    }
+    };
 
     return (
         <div className={twMerge("w-full", className)}>
@@ -66,7 +72,7 @@ export default function ContactForm({
                 <p className="text-[#515151] text-base leading-7 mb-6">{subtitle}</p>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium text-black mb-1">
                         Nome
@@ -74,10 +80,21 @@ export default function ContactForm({
                     <input
                         type="text"
                         id="name"
-                        name="name"
-                        required
-                        className="w-full border border-black/15 rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange"
+                        autoComplete="name"
+                        maxLength={50}
+                        aria-invalid={!!errors.name}
+                        aria-describedby={errors.name ? "name-error" : undefined}
+                        className={twMerge(
+                            "w-full border rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange",
+                            errors.name ? "border-red-500 focus:border-red-500" : "border-black/15"
+                        )}
+                        {...register("name")}
                     />
+                    {errors.name && (
+                        <p id="name-error" role="alert" className="text-red-600 text-sm mt-1">
+                            {errors.name.message}
+                        </p>
+                    )}
                 </div>
 
                 <div>
@@ -87,10 +104,21 @@ export default function ContactForm({
                     <input
                         type="email"
                         id="email"
-                        name="email"
-                        required
-                        className="w-full border border-black/15 rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange"
+                        autoComplete="email"
+                        maxLength={254}
+                        aria-invalid={!!errors.email}
+                        aria-describedby={errors.email ? "email-error" : undefined}
+                        className={twMerge(
+                            "w-full border rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange",
+                            errors.email ? "border-red-500 focus:border-red-500" : "border-black/15"
+                        )}
+                        {...register("email")}
                     />
+                    {errors.email && (
+                        <p id="email-error" role="alert" className="text-red-600 text-sm mt-1">
+                            {errors.email.message}
+                        </p>
+                    )}
                 </div>
 
                 <div>
@@ -100,9 +128,26 @@ export default function ContactForm({
                     <input
                         type="tel"
                         id="phone"
-                        name="phone"
-                        className="w-full border border-black/15 rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange"
+                        autoComplete="tel"
+                        maxLength={15}
+                        aria-invalid={!!errors.phone}
+                        aria-describedby={errors.phone ? "phone-error" : undefined}
+                        className={twMerge(
+                            "w-full border rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange",
+                            errors.phone ? "border-red-500 focus:border-red-500" : "border-black/15"
+                        )}
+                        {...register("phone", {
+                            onChange: (e) => {
+                                const formatted = formatPhone(e.target.value);
+                                setValue("phone", formatted, { shouldValidate: true });
+                            },
+                        })}
                     />
+                    {errors.phone && (
+                        <p id="phone-error" role="alert" className="text-red-600 text-sm mt-1">
+                            {errors.phone.message}
+                        </p>
+                    )}
                 </div>
 
                 <div>
@@ -111,11 +156,21 @@ export default function ContactForm({
                     </label>
                     <textarea
                         id="message"
-                        name="message"
                         rows={5}
-                        required
-                        className="w-full border border-black/15 rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange"
+                        maxLength={2000}
+                        aria-invalid={!!errors.message}
+                        aria-describedby={errors.message ? "message-error" : undefined}
+                        className={twMerge(
+                            "w-full border rounded-md px-4 py-3 text-base focus:outline-none focus:border-brand-orange",
+                            errors.message ? "border-red-500 focus:border-red-500" : "border-black/15"
+                        )}
+                        {...register("message")}
                     />
+                    {errors.message && (
+                        <p id="message-error" role="alert" className="text-red-600 text-sm mt-1">
+                            {errors.message.message}
+                        </p>
+                    )}
                 </div>
 
                 <button
