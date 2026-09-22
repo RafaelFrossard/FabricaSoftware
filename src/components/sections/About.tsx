@@ -1,4 +1,3 @@
-import { officeImage } from "../../assets/figmaAssets";
 import Container from "../layout/Container";
 
 export default function About() {

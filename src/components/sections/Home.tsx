@@ -1,4 +1,3 @@
-import { heroIllustration } from "../../assets/figmaAssets";
 import Button from "../layout/Button";
 import Container from "../layout/Container";
 
