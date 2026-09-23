@@ -1,8 +1,8 @@
 import Container from "../../../components/layout/Container";
 
 const projects = [
-  { name: "Projeto Lumini", link: "project-lumini", image: "lumini-logo.jpg" },
-  { name: "Projeto Mounjaro", link: "project-mounjaro", image: "lumini-logo.jpg" },
+  { name: "Projeto Lumini", link: "project-lumini", image: "/images/lumini/logo.jpg" },
+  { name: "Projeto WeighCare", link: "project-weightcare", image: "/images/weightcare/weightcare-logo.webp" },
 ];
 
 export default function Projects() {
