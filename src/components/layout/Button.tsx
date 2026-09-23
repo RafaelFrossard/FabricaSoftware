@@ -11,6 +11,7 @@ type ButtonAsHashLink = {
     to: string
     href?: undefined
     className?: string
+    onClick?: () => void
 }
 
 type ButtonAsButton = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -23,7 +24,7 @@ type ButtonProps = (ButtonAsLink | ButtonAsHashLink | ButtonAsButton) & {
     className?: string
 }
 
-export default function Button({ children, className, href, to, ...rest }: ButtonProps) {
+export default function Button({ children, className, href, to, onClick, ...rest }: ButtonProps) {
     const classes = twMerge(
         "inline-block text-white text-base font-medium rounded-full px-8 py-4 text-center transition-[filter] duration-200 hover:brightness-90",
         className
@@ -32,7 +33,7 @@ export default function Button({ children, className, href, to, ...rest }: Butto
 
     if (to) {
         return (
-            <HashLink to={to} className={classes} style={style}>
+            <HashLink to={to} className={classes} style={style} onClick={onClick}>
                 {children}
             </HashLink>
         )

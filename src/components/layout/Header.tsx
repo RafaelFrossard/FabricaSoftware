@@ -87,7 +87,8 @@ export default function Header() {
             ))}
             <Button
               className="mt-5"
-              to="/#contact">Entrar em contato
+              to="/#contact"
+              onClick={() => setIsOpen(false)}>Entrar em contato
             </Button>
           </nav>
         </div>
