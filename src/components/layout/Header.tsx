@@ -3,7 +3,7 @@ import Button from "./Button";
 import { HashLink } from "react-router-hash-link"
 
 const navLinks = [
-  { label: "Início", href: "/" },
+  { label: "Início", href: "/#home" },
   { label: "Sobre", href: "/#about" },
   { label: "Áreas de atuação", href: "/#areas" },
   { label: "Equipe", href: "/#team" },
@@ -20,7 +20,7 @@ export default function Header() {
 
           <a href="/" className="shrink-0">
             <img
-              src="/logo-horizontal-negativo.svg"
+              src="/images/layout/logo-horizontal-negativo.svg"
               className="w-36 sm:w-40"
               alt="Logo"
             />
