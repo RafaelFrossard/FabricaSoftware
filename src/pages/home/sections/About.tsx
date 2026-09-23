@@ -2,7 +2,7 @@ import Container from "../../../components/layout/Container";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 text-center">
+    <section id="about" className="py-16 text-center shadow-xl">
       <Container>
         <h2 className="text-black text-2xl lg:text-[32px] font-semibold leading-snug max-w-3xl mx-auto mb-12">
           <span className="text-[#002A52]">
