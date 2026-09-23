@@ -38,7 +38,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <Button className="hidden lg:inline-block" href="#contact">
+          <Button className="hidden lg:inline-block" to="/#contact">
             Entrar em contato
           </Button>
 
@@ -87,8 +87,7 @@ export default function Header() {
             ))}
             <Button
               className="mt-5"
-              href="#contact"
-              onClick={() => setIsOpen(false)}>Entrar em contato
+              to="/#contact">Entrar em contato
             </Button>
           </nav>
         </div>
