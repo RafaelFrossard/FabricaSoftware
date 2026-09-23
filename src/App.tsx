@@ -1,27 +1,20 @@
-import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
-import About from "./components/sections/About";
-import Areas from "./components/sections/Areas";
-import Contact from "./components/sections/Contact";
-import Home from "./components/sections/Home";
-import Projects from "./components/sections/Projects";
-import Team from "./components/sections/Team";
-
+import { Routes, Route } from "react-router-dom"
+import Layout from "./components/layout/Layout"
+import HomePage from "./pages/home"
+import Error404Page from "./pages/error404"
+import WeightCarePage from "./pages/projects/weightcare"
+import LuminiPage from "./pages/projects/lumini"
 function App() {
   return (
-    <div className="font-poppins">
-      <Header />
-      <main>
-        <Home />
-        <About />
-        <Areas />
-        <Team />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="project-lumini" element={<LuminiPage />} />
+        <Route path="project-weightcare" element={<WeightCarePage />} />
+        <Route path="*" element={<Error404Page />} />
+      </Route>
+    </Routes>
+  )
 }
 
-export default App;
+export default App

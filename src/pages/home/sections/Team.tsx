@@ -1,12 +1,12 @@
-import Container from "../layout/Container";
+import Container from "../../../components/layout/Container";
 
 const members = [
-  { name: "Fernanda Ferrari", role: "Líder de Equipe", photo: "fernanda.jpg" },
-  { name: "Anderson Burnes", role: "Professor/Orientador", photo: "burnes.jpg" },
-  { name: "João", role: "Desenvolvimento", photo: "joao.jpeg" },
-  { name: "Julia", role: "Desenvolvimento", photo: "julia.jpeg" },
-  { name: "Rafael", role: "Desenvolvimento", photo: "rafael.jpeg" },
-  { name: "Thaila", role: "Desenvolvimento", photo: "thaila.png" },
+  { name: "Fernanda Ferrari", role: "Líder de Equipe", photo: "/images/home/fernanda.jpg" },
+  { name: "Anderson Burnes", role: "Professor/Orientador", photo: "/images/home/burnes.jpg" },
+  { name: "João", role: "Desenvolvimento", photo: "/images/home/joao.jpeg" },
+  { name: "Julia", role: "Desenvolvimento", photo: "/images/home/julia.jpeg" },
+  { name: "Rafael", role: "Desenvolvimento", photo: "/images/home/rafael.jpeg" },
+  { name: "Thaila", role: "Desenvolvimento", photo: "/images/home/thaila.png" },
 ];
 
 export default function Team() {

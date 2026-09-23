@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Button from "./Button";
+import { HashLink } from "react-router-hash-link"
 
 const navLinks = [
-  { label: "Início", href: "#home" },
-  { label: "Sobre", href: "#about" },
-  { label: "Áreas de atuação", href: "#areas" },
-  { label: "Equipe", href: "#team" },
-  { label: "Projetos", href: "#projects" },
+  { label: "Início", href: "/#home" },
+  { label: "Sobre", href: "/#about" },
+  { label: "Áreas de atuação", href: "/#areas" },
+  { label: "Equipe", href: "/#team" },
+  { label: "Projetos", href: "/#projects" },
 ];
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
 
           <a href="/" className="shrink-0">
             <img
-              src="/logo-horizontal-negativo.svg"
+              src="/images/layout/logo-horizontal-negativo.svg"
               className="w-36 sm:w-40"
               alt="Logo"
             />
@@ -27,13 +28,13 @@ export default function Header() {
 
           <nav className="hidden items-center gap-8 lg:flex xl:gap-10">
             {navLinks.map((link) => (
-              <a
+              <HashLink
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-[15px] text-white transition-colors hover:text-brand-orange"
               >
                 {link.label}
-              </a>
+              </HashLink>
             ))}
           </nav>
 

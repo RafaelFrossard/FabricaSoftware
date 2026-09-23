@@ -1,5 +1,5 @@
-import Button from "../layout/Button";
-import Container from "../layout/Container";
+import Button from "../../../components/layout/Button";
+import Container from "../../../components/layout/Container";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
 
           <div className="relative">
             <img
-              src="imagem-home.svg"
+              src="/images/home/imagem-home.svg"
               alt="Ilustração de equipe trabalhando"
               className="w-full h-auto object-contain"
             />
