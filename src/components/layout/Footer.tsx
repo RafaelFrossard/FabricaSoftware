@@ -1,9 +1,9 @@
-import { 
-  faInstagram, 
-  faLinkedin, 
-  faSpotify, 
-  faWhatsapp, 
-  faYoutube 
+import {
+  faInstagram,
+  faLinkedin,
+  faSpotify,
+  faWhatsapp,
+  faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -50,12 +50,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-16">
           <div>
             <a href="/" className="text-2xl font-bold block mb-4">
-              <img src="/logo-horizontal-negativo.svg" className="w-40" alt="Logo" />
+              <img src="/images/layout/logo-horizontal-negativo.svg" className="w-40" alt="Logo" />
             </a>
             <p className="text-sm text-white/80 leading-7 mb-4">
               Desenvolvemos soluções de software para transformar ideias em projetos que geram valor.
             </p>
-            <a 
+            <a
               href="mailto:fabricasoftware@integrowintegrado.br"
               className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block"
             >
@@ -96,8 +96,8 @@ export default function Footer() {
             <p className="text-sm text-white/80 leading-7 mb-4">
               Estamos disponíveis para conversar sobre seu projeto, tirar dúvidas e entender como podemos ajudar.
             </p>
-            <a 
-              href="tel:+08000007005" 
+            <a
+              href="tel:+08000007005"
               className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block"
             >
               <FontAwesomeIcon icon={faPhone} /> 0800 000 7005
