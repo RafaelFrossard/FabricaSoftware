@@ -3,7 +3,7 @@ import Container from "../../../components/layout/Container";
 
 export default function Home() {
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-[#fff7ef] to-white pt-20">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-[#fff7ef] to-white pt-20 shadow-md">
       <Container>
         <div className="py-20 grid md:grid-cols-2 gap-12 items-center">
           <div>
