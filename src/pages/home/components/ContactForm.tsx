@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { twMerge } from "tailwind-merge";
-import { contactSchema, type ContactFormData } from "../../schema/contactSchema";
-import { formatPhone } from "../../utils/formatPhone";
-import Button from "./Button";
+import { contactSchema, type ContactFormData } from "../../../schema/contactSchema";
+import { formatPhone } from "../../../utils/formatPhone";
+import Button from "../../../components/layout/Button";
 
 interface ContactFormProps {
     title?: string;

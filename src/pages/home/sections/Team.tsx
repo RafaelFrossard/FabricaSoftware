@@ -1,4 +1,4 @@
-import Container from "../layout/Container";
+import Container from "../../../components/layout/Container";
 
 const members = [
   { name: "Fernanda Ferrari", role: "Líder de Equipe", photo: "fernanda.jpg" },

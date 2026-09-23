@@ -1,4 +1,4 @@
-import Container from "../layout/Container";
+import Container from "../../../components/layout/Container";
 
 export default function About() {
   return (

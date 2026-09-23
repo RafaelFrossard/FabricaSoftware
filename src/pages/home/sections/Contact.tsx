@@ -1,5 +1,5 @@
-import Container from "../layout/Container";
-import ContactForm from "../layout/ContactForm";
+import Container from "../../../components/layout/Container";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (

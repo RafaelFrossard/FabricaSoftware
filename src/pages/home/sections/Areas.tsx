@@ -7,8 +7,8 @@ import {
   Plug,
   ShoppingCart,
 } from "lucide-react";
+import Container from "../../../components/layout/Container";
 
-import Container from "../layout/Container";
 
 interface AreasItem {
   icon: React.ReactNode;
