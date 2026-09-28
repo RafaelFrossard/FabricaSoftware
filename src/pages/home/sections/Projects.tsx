@@ -22,10 +22,10 @@ export default function Projects() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
 
-            <a href={project.link}>
+            <a
+              key={index} href={project.link} className="group">
               <div
-                key={index}
-                className="group relative rounded-[20px] overflow-hidden aspect-[16/10] bg-[#c4c4c4] cursor-pointer border border-opacity-5"
+                className="relative rounded-[20px] overflow-hidden aspect-[16/10] bg-[#c4c4c4] border border-opacity-5"
               >
                 <img
                   src={project.image}
