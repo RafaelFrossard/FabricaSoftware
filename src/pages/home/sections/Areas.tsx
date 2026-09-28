@@ -73,7 +73,7 @@ export default function Areas() {
               key={service.label}
               className="flex flex-col items-center text-center gap-4 group"
             >
-              <div className="h-[65px] w-[65px] rounded-full bg-[#f5f5f5] flex items-center justify-center text-brand-orange-dark group-hover:bg-brand-orange-dark group-hover:text-white transition-colors">
+              <div className="h-[65px] w-[65px] rounded-full bg-[#f5f5f5] flex items-center justify-center text-brand-orange-dark hover:bg-brand-orange-dark hover:text-white transition-colors">
                 {service.icon}
               </div>
 

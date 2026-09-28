@@ -57,7 +57,7 @@ export default function Footer() {
             </p>
             <a
               href="mailto:fabricasoftware@integrowintegrado.br"
-              className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block"
+              className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block w-max"
             >
               fabricasoftware@integrowintegrado.br
             </a>
@@ -98,7 +98,7 @@ export default function Footer() {
             </p>
             <a
               href="tel:+08000007005"
-              className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block"
+              className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block w-max"
             >
               <FontAwesomeIcon icon={faPhone} /> 0800 000 7005
             </a>
