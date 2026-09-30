@@ -11,6 +11,10 @@
   --espacamento: 16px;
 }
 
+html {
+  scroll-padding-top: 6rem;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
