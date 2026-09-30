@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="py-16 text-center shadow-xl">
       <Container>
         <h2 className="text-black text-2xl lg:text-[32px] font-semibold leading-snug max-w-3xl mx-auto mb-12">
-          <span className="text-[#002A52]">
+          <span className="text-brand-blue">
             Sua ideia ganha forma aqui,
           </span>{" "}
           com tecnologia e uma equipe que constrói junto com você.
