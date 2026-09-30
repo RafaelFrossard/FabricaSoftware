@@ -14,7 +14,7 @@ export default function Team() {
     <section id="team" className="bg-[#f5f5f5] py-20">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-2xl lg:text-[32px] font-semibold text-[#002A52] mb-4">
+          <h2 className="text-2xl lg:text-[32px] font-semibold text-brand-blue mb-4">
             Quem cria com você
           </h2>
 
@@ -30,7 +30,7 @@ export default function Team() {
               key={member.name}
               className="flex flex-col items-center text-center"
             >
-              <div className="w-32 h-32 md:w-36 md:h-36 overflow-hidden rounded-full border-4 border-white ring-1 ring-[#002A52]/15">
+              <div className="w-32 h-32 md:w-36 md:h-36 overflow-hidden rounded-full border-4 border-white ring-1 ring-brand-blue/15">
                 <img
                   src={member.photo}
                   alt={`Foto de ${member.name}`}
@@ -41,7 +41,7 @@ export default function Team() {
                 />
               </div>
 
-              <h3 className="mt-5 text-xl font-semibold text-[#002A52]">
+              <h3 className="mt-5 text-xl font-semibold text-brand-blue">
                 {member.name}
               </h3>
 
