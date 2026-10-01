@@ -8,7 +8,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="flex justify-center">
                         <img
-                            src="/images/layout/macaco-dev.png"
+                            src="/images/layout/caco-404.svg"
                             alt="Página não encontrada"
                             className="w-full max-w-md"
                         />
