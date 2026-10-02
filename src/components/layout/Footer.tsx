@@ -60,7 +60,7 @@ export default function Footer() {
               href="mailto:fabricasoftware@integrowintegrado.br"
               className="text-sm text-white/80 mb-4 hover:text-brand-orange transition-colors block w-max"
             >
-              fabricasoftware@integrowintegrado.br
+              faleconosco@fabricaintegrado.com.br
             </a>
 
             <div className="flex items-center gap-3">
